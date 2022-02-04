@@ -14,7 +14,7 @@ hi Normal                                  cterm=NONE  ctermfg=11  ctermbg=15  g
 
 set background=light
 
-hi ColorColumn                             cterm=NONE  ctermbg=7  guibg=#eee8d5  gui=NONE
+hi ColorColumn                             cterm=NONE  ctermbg=3  guibg=#f7f0dd  gui=NONE
 hi Comment                                 cterm=NONE  ctermfg=14 guifg=#93a1a1  gui=italic
 hi ConId                                   cterm=NONE  ctermfg=3  guifg=#b58900  gui=NONE
 hi Conceal                                 cterm=NONE  ctermfg=4  ctermbg=15  guifg=#268bd2  guibg=#fdf6e3  gui=NONE
@@ -31,7 +31,7 @@ hi Directory                               cterm=NONE  ctermfg=4  guifg=#268bd2 
 hi Error                                   cterm=NONE  ctermfg=1  ctermbg=NONE  guifg=#dc322f  guibg=#fdf6e3  gui=NONE
 hi ErrorMsg                                cterm=reverse  ctermfg=1  ctermbg=NONE guifg=#dc322f  guibg=NONE gui=reverse
 hi FoldColumn                              cterm=NONE  ctermfg=11  ctermbg=7  guifg=#657b83  guibg=#eee8d5  gui=NONE
-hi Folded                                  cterm=NONE,underline ctermfg=11  ctermbg=12  guifg=#b3bbb5  guibg=#f7f0dd  guisp=#fdf6e3   gui=NONE
+hi Folded                                  cterm=NONE,underline ctermfg=11  ctermbg=12  guifg=#b3bbb5  guibg=NONE  guisp=#fdf6e3   gui=NONE
 hi HelpExample                             cterm=NONE  ctermfg=10  guifg=#586e75  gui=NONE
 hi Identifier                              cterm=NONE  ctermfg=4  guifg=#268bd2  gui=NONE
 hi IncSearch                               cterm=standout  ctermfg=9  gui=standout  guifg=#cb4b16
@@ -195,6 +195,7 @@ hi pandocVerbatimInlineTable               cterm=NONE  ctermfg=4  guifg=#268bd2 
 hi perlHereDoc                             cterm=NONE  ctermfg=10  ctermbg=15  guifg=#586e75  guibg=#fdf6e3  gui=NONE
 hi perlStatementFileDesc                   cterm=NONE  ctermfg=6  ctermbg=15  guifg=#2aa198  guibg=#fdf6e3  gui=NONE
 hi perlVarPlain                            cterm=NONE  ctermfg=3  ctermbg=15  guifg=#b58900  guibg=#fdf6e3  gui=NONE
+hi pythonComment                           cterm=NONE  ctermfg=14 guifg=#c3c9b7  gui=italic
 hi rubyDefine                              cterm=NONE  ctermfg=10  ctermbg=15  gui=NONE  guifg=#586e75  guibg=#fdf6e3  gui=NONE
 hi texMathMatcher                          cterm=NONE  ctermfg=3  ctermbg=15  guifg=#b58900  guibg=#fdf6e3  gui=NONE
 hi texMathZoneX                            cterm=NONE  ctermfg=3  ctermbg=15  guifg=#b58900  guibg=#fdf6e3  gui=NONE
@@ -312,3 +313,8 @@ if has('nvim')
   let g:terminal_color_14 = '#586e75'
   let g:terminal_color_15 = '#002b36'
 endif
+
+" Override theme colours
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00  ctermfg=3
+highlight GitGutterDelete guifg=#ff2222  ctermfg=1
